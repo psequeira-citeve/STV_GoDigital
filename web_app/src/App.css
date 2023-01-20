@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
+.container {
+  display: flex;
+  background-color: #139c9a;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh; /* Add this */
+  min-width: 100vw; /* Add this */
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.titleContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title {
+  font-size: 18px;
+  font-weight: 400;
+}
+.title span{
+  font-weight: 900;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cardContainer {
+  position: absolute; /* Add this */
+  top: 55%; /* Add this */
+  left: 50%; /* Add this */
+  transform: translate(-50%,-50%); /* Add this */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
+  justify-content: center; 
+  padding: 16px;
+}
+
+
+
+
+.card1 {
+  width: 1500px;
+  height: 400px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.2); 
+  margin-bottom: 15px;
+  margin-top: -60px;
+  display: flex;
+  align-items: center; 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center; 
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card1 img{
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  width: 300px; 
+  height: 300px; 
+  align-self: center; 
+  justify-self: center;
+  margin-top: -80px;
+
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card1 .text{
+  display: flex;
+  grid-template-columns: 1fr;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  width: 300px; 
+  height: 300px;
+  align-self: center; 
+  justify-self: center; 
+  text-align: center;
+  margin-top: -80px;
+}
+
+
+
+.card2 {
+  width: 1500px;
+  height: 430px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+  margin: auto; /* Add this */
+}
+
+@media (max-width: 768px) {
+  .cardContainer {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .card1 {
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+    margin: auto; /* Add this */
+    margin-bottom: 15px;
+  }
+  .card2 {
+    width: 300px;
+    height: 450px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+    margin: auto; /* Add this */
+    margin-bottom: 30px;
+  }
+
+  .card1 img{
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    width: 150px; 
+    height: 150px; 
+    align-self: center; 
+    justify-self: center;
+    margin-top: -60px;
+  
+  
+  }
+  
+  .card1 .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    width: 150px; 
+    height: 150px;
+    align-self: center; 
+    justify-self: center; 
+    text-align: center;
+    margin-top: -60px;
+  }
+  .card1 .text p {
+    margin: 5px 0 5px 30px;
   }
 }
